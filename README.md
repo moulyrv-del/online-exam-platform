@@ -30,17 +30,6 @@ A full-stack web app where students take timed multiple-choice exams with webcam
 | Auth | bcryptjs (password hashing) + JSON Web Tokens |
 | Proctoring | Browser `getUserMedia` (WebRTC media API), Page Visibility API |
 
-## Screenshots
-
-Add your own screenshots to a `screenshots/` folder and link them here:
-
-| Page | Screenshot |
-|------|-----------|
-| Login | `screenshots/login.png` |
-| Dashboard | `screenshots/dashboard.png` |
-| Exam page | `screenshots/exam.png` |
-| Result page | `screenshots/result.png` |
-| Admin dashboard | `screenshots/admin.png` |
 
 ## Installation
 
@@ -98,6 +87,3 @@ online-exam-platform/
 - Password reset by email
 - Full-screen enforcement and copy/paste blocking
 
-## License
-
-Free to use for learning and academic projects.
