@@ -1,5 +1,3 @@
--- Online Examination & Proctoring Platform - database schema
--- WARNING: running this file deletes and re-creates all tables.
 
 DROP TABLE IF EXISTS results CASCADE;
 DROP TABLE IF EXISTS answers CASCADE;
@@ -37,7 +35,7 @@ CREATE TABLE questions (
   marks INT NOT NULL DEFAULT 1 CHECK (marks > 0)
 );
 
--- One row each time a student starts an exam
+
 CREATE TABLE exam_attempts (
   id SERIAL PRIMARY KEY,
   user_id INT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
@@ -48,7 +46,7 @@ CREATE TABLE exam_attempts (
   status VARCHAR(15) NOT NULL DEFAULT 'in_progress' CHECK (status IN ('in_progress', 'submitted'))
 );
 
--- The option the student picked for each question
+
 CREATE TABLE answers (
   id SERIAL PRIMARY KEY,
   attempt_id INT NOT NULL REFERENCES exam_attempts(id) ON DELETE CASCADE,
@@ -58,7 +56,7 @@ CREATE TABLE answers (
   UNIQUE (attempt_id, question_id)
 );
 
--- Final score, calculated automatically on submit
+
 CREATE TABLE results (
   id SERIAL PRIMARY KEY,
   attempt_id INT UNIQUE NOT NULL REFERENCES exam_attempts(id) ON DELETE CASCADE,
