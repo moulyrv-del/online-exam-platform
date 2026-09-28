@@ -1,4 +1,4 @@
--- Optional starter content. Load with: npm run db:seed
+
 
 INSERT INTO exams (title, description, duration_minutes) VALUES
 ('JavaScript Basics', 'Five questions on core JavaScript concepts.', 10),
